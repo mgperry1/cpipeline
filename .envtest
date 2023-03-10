@@ -1,0 +1,24 @@
+SECRET_KEY=SCGCgMJCbujqHitvIcPQsWhaWGMEpfpIoQvzkOKXoKNDiuNiep
+ENVIRONMENT=DEV
+ACCESS_TOKEN_EXPIRE_MINUTES=11520
+REFRESH_TOKEN_EXPIRE_MINUTES=40320
+BACKEND_CORS_ORIGINS=["http://localhost:3000","http://localhost:8001"]
+ALLOWED_HOSTS=["localhost", "127.0.0.1"]
+
+DEFAULT_SQLALCHEMY_DATABASE_URI=postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+DEFAULT_DATABASE_HOSTNAME=localhost
+DEFAULT_DATABASE_USER=postgres
+DEFAULT_DATABASE_PASSWORD=lindev7254
+DEFAULT_DATABASE_PORT=5432
+DEFAULT_DATABASE_DB=us6devlinx01
+
+TEST_SQLALCHEMY_DATABASE_URI=postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+TEST_SQLALCHEMY_DATABASE_URI=postgresql+asyncpg://linuxdevuser:lindev7254@us6sdpgs00002.postgres.database.azure.com:5432/us6devlinx01
+TEST_DATABASE_HOSTNAME=us6sdpgs00002.postgres.database.azure.com
+TEST_DATABASE_USER=linuxdevuser
+TEST_DATABASE_PASSWORD=lindev7254
+TEST_DATABASE_PORT=5432
+TEST_DATABASE_DB=us6devlinx01
+
+FIRST_SUPERUSER_EMAIL=Matt.G.Perry@gsk.com
+FIRST_SUPERUSER_PASSWORD=L1vetoeat

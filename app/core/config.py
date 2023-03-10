@@ -46,7 +46,7 @@ class Settings(BaseSettings):
     #PROJECT_NAME: str = PYPROJECT_CONTENT["name"]
     #VERSION: str = PYPROJECT_CONTENT["version"]
     #DESCRIPTION: str = PYPROJECT_CONTENT["description"]
-    PROJECT_NAME: str = "cpipline"
+    PROJECT_NAME: str = "cpipeline"
     VERSION: str = "1.0"
     DESCRIPTION: str = "Container Pipeline"
 
