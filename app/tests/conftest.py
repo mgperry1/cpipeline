@@ -41,7 +41,8 @@ async def test_db_setup_sessionmaker():
 
 
 @pytest_asyncio.fixture(autouse=True)
-async def session(test_db_setup_sessionmaker) -> AsyncGenerator[AsyncSession, None]:
+#async def session(test_db_setup_sessionmaker) -> AsyncGenerator[AsyncSession, None]:
+async def session(test_db_setup_sessionmaker) -> AsyncGenerator:
     async with async_session() as session:
         yield session
 
@@ -52,7 +53,8 @@ async def session(test_db_setup_sessionmaker) -> AsyncGenerator[AsyncSession, No
 
 
 @pytest_asyncio.fixture(scope="session")
-async def client() -> AsyncGenerator[AsyncClient, None]:
+#async def client() -> AsyncGenerator[AsyncClient, None]:
+async def client() -> AsyncGenerator:
     async with AsyncClient(app=app, base_url="http://test") as client:
         client.headers.update({"Host": "localhost"})
         yield client

@@ -20,13 +20,13 @@ PWD_CONTEXT = CryptContext(
 
 
 class JWTTokenPayload(BaseModel):
-    sub: str | int
+    sub: str 
     refresh: bool
     issued_at: int
     expires_at: int
 
 
-def create_jwt_token(subject: str | int, exp_secs: int, refresh: bool):
+def create_jwt_token(subject: str , exp_secs: int, refresh: bool):
     """Creates jwt access or refresh token for user.
 
     Args:
@@ -52,7 +52,7 @@ def create_jwt_token(subject: str | int, exp_secs: int, refresh: bool):
     return encoded_jwt, expires_at, issued_at
 
 
-def generate_access_token_response(subject: str | int):
+def generate_access_token_response(subject: str ):
     """Generate tokens and return AccessTokenResponse"""
     access_token, expires_at, issued_at = create_jwt_token(
         subject, ACCESS_TOKEN_EXPIRE_SECS, refresh=False
@@ -87,3 +87,4 @@ def get_password_hash(password: str) -> str:
     It takes about 0.3s for default 12 rounds of SECURITY_BCRYPT_DEFAULT_ROUNDS.
     """
     return PWD_CONTEXT.hash(password)
+    
