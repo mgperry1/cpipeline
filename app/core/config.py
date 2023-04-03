@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     SECURITY_BCRYPT_ROUNDS: int = 12
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 11520  # 8 days
     REFRESH_TOKEN_EXPIRE_MINUTES: int = 40320  # 28 days
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = ["https://dev.gsk.com"]
+    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = ["https://dev.xxx.com"]
     ALLOWED_HOSTS: List[str] = ["localhost", "127.0.0.1"]
 
     # PROJECT NAME, VERSION AND DESCRIPTION
